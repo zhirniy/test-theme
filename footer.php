@@ -1,14 +1,17 @@
 <footer class="footer" id="footer">
 	<a href="#" class="logo">
-		<img src="img/logo-primary.png" alt="">
+		<img src="<?= get_template_directory_uri(); ?>/img/logo-primary.png" alt="">
 	</a>
 	<nav class="footer-nav">
-		<ul class="footer-menu">
-			<li><a href="#">Курси</a></li>
-			<li><a href="#">Заходи</a></li>
-			<li><a href="#">Про хаб </a></li>
-			<li><a href="#">Контакти </a></li>
-		</ul>
+        <?php
+            wp_nav_menu(array(
+                'theme_location' => 'footer-menu',
+                'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+                'menu_class' => 'footer-menu footer-menu-item',
+                'menu_id' => 'footer-menu',
+                'depth' => 1
+            ));
+        ?>
 	</nav>
 
 	<div class="footer-bottom">
@@ -50,17 +53,11 @@
 		</div>
 	</div>
 </footer>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
-<script src="js/moment.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/pikaday/pikaday.js"></script>
-
-<script src="https://www.youtube.com/player_api"></script>
-<script src="js/slider.js"></script>
-<script src="js/selectorStylize.js"></script>
-<script src="js/smoothScroll.js"></script>
-<script src="js/main.js"></script>
-
+<?php if (!$_COOKIE["country"]): ?>
+    <?php if(!get_query_var('country')): ?>
+        <?php get_template_part('template-parts/modal', 'question'); ?>
+    <?php endif; ?>
+<?php endif; ?>
+<?php wp_footer(); ?>
 </body>
 </html>

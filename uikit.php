@@ -1,10 +1,19 @@
-<?php include('header.php'); ?>
+<?php
+/**
+ * Template Name: Uikit
+ *
+ * @package WordPress
+ * @subpackage Test Theme
+ * @since Test Theme 1.0
+ */
+?>
+<?php  get_header(); ?>
 
-	<?php 
-
-			$title = "UIKit";
-			include('inc/title.php');
-	?>
+<?php
+    get_template_part('template-parts/title', null, array(
+        'title' => 'UIKit'
+    ));
+?>
 	
 <div class="wrap">
 	<br>
@@ -373,14 +382,4 @@
 
 </div>
 
-
-
-
-
-
-
-
-
-
-
-<?php include('footer.php'); ?>
+<?php get_footer(); ?>

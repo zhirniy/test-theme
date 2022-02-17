@@ -79,7 +79,7 @@
 		</a>
 	</li>
 	<li>
-		<a href="/news.php">
+		<a href="/news/">
 			News
 		</a>
 	</li>

@@ -1,15 +1,12 @@
-<?php include('header.php'); ?>
+<?php get_header(); ?>
 <main class="main" id="main">
-	<?php
 
-	$titleClasses = 'page-title-center page-title-lg';
-	$title = 'КИЇВСЬКИЙ ОСВІТНІЙ ХАБ';
-
-	$titleDescription = true;
-	$titleBtns = true;
-
-	include('inc/title.php');
-	?>
+    <?php get_template_part('template-parts/title', null, array(
+        'classes' => 'page-title-center page-title-lg',
+        'title' => 'КИЇВСЬКИЙ ОСВІТНІЙ ХАБ',
+        'description' => true,
+        'btns' => true
+    )); ?>
 
 	<nav class="anchor-nav">
 		<div class="wrap">
@@ -77,7 +74,7 @@
 				</div>
 			</div>
 			<a href="#" class="to-video">
-				<img src="img/course.jpg" alt="">
+				<img src="<?= get_template_directory_uri();  ?>/img/course.jpg" alt="">
 				<button class="btn-tr play-btn">
 					<svg class="icon">
 						<use xlink:href="#play">
@@ -257,98 +254,7 @@
 	<section class="section section-pd">
 		<div class="wrap">
 			<h2>ЖИВЕ СПІЛКУВАННЯ</h2>
-			<div class="row card-square-amount">
-				<div class="col-6 col-md">
-					<div class="card-square special-card">
-						<div class="card-square-sp">
-							<span class="text">
-								Окрім тестування, навчання топовим навичкам та побудови успішної кар’єри Ти отримуєш можливість відвідувати наші FAN-активності:
-							</span>
-							<ul>
-								<li>Презентації українських та міжнародних компаній</li>
-								<li>Чемпіонати з інтелектуальних ігор</li>
-								<li>Історії успіху</li>
-								<li>Кіно Клуб</li>
-								<li>Lingva SHOW</li>
-								<li>Школа HR</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-				<div class="col-6 col-md">
-					<div class="card-square">
-						<div class="card-square-inner">
-							<div class="card-square-date">
-								<span class="day">
-									20
-								</span>
-								<span class="month">
-									Січня 2019
-								</span>
-							</div>
-							<div class="card-square-title">
-								<span># Історії успіху</span>
-								<h2>
-									<a href="#" class="like-h3">
-										Як бути касиром в АТБ та їздити на Bentley
-									</a>
-								</h2>
-								<span>Андрій Вертихвіст</span>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-6 col-md">
-					<div class="card-square">
-						<div class="card-square-inner">
-							<div class="card-square-date">
-								<span class="day">
-									20
-								</span>
-								<span class="month">
-									Січня 2019
-								</span>
-							</div>
-							<div class="card-square-title">
-								<span># Історії успіху</span>
-								<h2>
-									<a href="#" class="like-h3">
-										Як бути касиром в АТБ та їздити на Bentley Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor temporibus nesciunt possimus dolores consequuntur officiis non iste amet commodi dicta?
-									</a>
-								</h2>
-								<span>Андрій Вертихвіст</span>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-6 col-md">
-					<div class="card-square">
-						<div class="card-square-inner">
-							<div class="card-square-date">
-								<span class="day">
-									20
-								</span>
-								<span class="month">
-									Січня 2019
-								</span>
-							</div>
-							<div class="card-square-title">
-								<span># Історії успіху</span>
-								<h2>
-									<a href="#" class="like-h3">
-										Як бути касиром в АТБ та їздити на Bentley
-									</a>
-								</h2>
-								<span>Андрій Вертихвіст</span>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<a href="#" class="btn">
-					Ще заходи
-				</a>
-			</div>
+            <?php get_template_part('template-parts/card', 'square'); ?>
 		</div>
 	</section>
 
@@ -389,7 +295,7 @@
 								</span>
 							</div>
 						</div>
-						<img src="img/card.jpg" alt="" class="cover-img">
+						<img src="<?= get_template_directory_uri();  ?>/img/card.jpg" alt="" class="cover-img">
 					</div>
 				</div>
 				<div class="col">
@@ -408,7 +314,7 @@
 								</span>
 							</div>
 						</div>
-						<img src="img/card.jpg" alt="" class="cover-img">
+						<img src="<?= get_template_directory_uri();  ?>/img/card.jpg" alt="" class="cover-img">
 					</div>
 				</div>
 				<div class="col">
@@ -427,7 +333,7 @@
 								</span>
 							</div>
 						</div>
-						<img src="img/card.jpg" alt="" class="cover-img">
+						<img src="<?= get_template_directory_uri();  ?>/img/card.jpg" alt="" class="cover-img">
 					</div>
 				</div>
 			</div>
@@ -438,17 +344,19 @@
 		<div class="wrap">
 			<h2>НАШІ ПАРТНЕРИ</h2>
 			<ul class="slider partners-slider" id="partners">
-				<li class="slider-item"><img src="img/partners/hub.svg" alt=""></li>
-				<li class="slider-item"><img src="img/partners/microsoft.svg" alt=""></li>
-				<li class="slider-item"><img src="img/partners/atb.svg" alt=""></li>
-				<li class="slider-item"><img src="img/partners/hub.svg" alt=""></li>
-				<li class="slider-item"><img src="img/partners/microsoft.svg" alt=""></li>
-				<li class="slider-item"><img src="img/partners/atb.svg" alt=""></li>
-				<li class="slider-item"><img src="img/partners/hub.svg" alt=""></li>
-				<li class="slider-item"><img src="img/partners/microsoft.svg" alt=""></li>
-				<li class="slider-item"><img src="img/partners/atb.svg" alt=""></li>
+				<li class="slider-item"><img src="<?= get_template_directory_uri();  ?>/img/partners/hub.svg" alt=""></li>
+				<li class="slider-item"><img src="<?= get_template_directory_uri();  ?>/img/partners/microsoft.svg" alt=""></li>
+				<li class="slider-item"><img src="<?= get_template_directory_uri();  ?>/img/partners/atb.svg" alt=""></li>
+				<li class="slider-item"><img src="<?= get_template_directory_uri();  ?>/img/partners/hub.svg" alt=""></li>
+				<li class="slider-item"><img src="<?= get_template_directory_uri();  ?>/img/partners/microsoft.svg" alt=""></li>
+				<li class="slider-item"><img src="<?= get_template_directory_uri();  ?>/img/partners/atb.svg" alt=""></li>
+				<li class="slider-item"><img src="<?= get_template_directory_uri();  ?>/img/partners/hub.svg" alt=""></li>
+				<li class="slider-item"><img src="<?= get_template_directory_uri();  ?>/img/partners/microsoft.svg" alt=""></li>
+				<li class="slider-item"><img src="<?= get_template_directory_uri();  ?>/img/partners/atb.svg" alt=""></li>
 			</ul>
 		</div>
 	</section>
 
-	<?php include('footer.php'); ?>
+    <?php get_template_part('template-parts/form'); ?>
+
+	<?php get_footer(); ?>

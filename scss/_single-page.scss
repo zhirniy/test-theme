@@ -16,7 +16,7 @@
 	text-decoration: none;
 	&::before{
 		content: '';
-		background-image: url('../img/icons/back-arrow.svg');
+		background-image: url('./img/icons/back-arrow.svg');
 		background-size: 2rem 2rem;
 		display: block;
 		width: 2rem;

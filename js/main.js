@@ -62,7 +62,9 @@ window.onload = function(){
 
 	btnMenu.addEventListener('click', () => {
 		header.classList.toggle('menu-open');
-		breadcrumbs.classList.toggle('hidden');
+		if (breadcrumbs && breadcrumbs.length){
+			breadcrumbs.classList.toggle('hidden');
+		}
 	});
 
 
@@ -316,9 +318,9 @@ window.onload = function(){
 		anchorlinks[i].addEventListener('click', function(e) {
 		    var hashval =  this.getAttribute('href');
 		    var target = document.querySelector(hashval);
-		    
-		    target.scrollIntoView({ behavior: 'smooth' });
-
+			if(target && target.length){
+				target.scrollIntoView({ behavior: 'smooth' });
+			}
 		    e.preventDefault();
 		});
 	}
