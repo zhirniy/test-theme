@@ -9,7 +9,7 @@ jQuery(document).ready(function ($) {
     });
 
     let evetnsLoad = {};
-    evetnsLoad.postPerPage = 2; // Post per page
+    evetnsLoad.postPerPage = 4; // Post per page
     evetnsLoad.number = 1;
 
     function loadMoreEvents(button, container){

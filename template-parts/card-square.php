@@ -80,7 +80,7 @@ $showedPosts = array();
     $argsEventsAfterFirstLoop = array(
         'post_type'		=> 'events',
         'post_status' => 'publish',
-        'posts_per_page'=> 2,
+        'posts_per_page'=> 4,
         'post__not_in'   => $showedPosts,
         'order' => 'DESC'
     );
