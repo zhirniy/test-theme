@@ -51,3 +51,4 @@ $the_last_news = new WP_Query( $argsLastNews );
     </div>
 </section>
 <?php endif; ?>
+<?php wp_reset_postdata(); ?>

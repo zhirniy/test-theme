@@ -59,14 +59,14 @@ function test_theme_setup(){
 
 }
 
+//After setup theme seted support title tag, support tag, post formats etc.
+add_action( 'after_setup_theme', 'test_theme_setup' );
+
 require 'inc/customizer.php';
 
 /*Add image size*/
 add_image_size( 'tablet-size', 700, 700 );
 add_image_size( 'mobile-size', 400, 400 );
-
-//After setup theme seted support title tag, support tag, post formats etc.
-add_action( 'after_setup_theme', 'test_theme_setup' );
 
 function change_logo_class( $html ) {
    $html = str_replace( 'custom-logo-link', 'logo', $html );
@@ -311,7 +311,6 @@ function sent_email(){
         $web = $_POST['web'] ?? null;
         $comment = $_POST['comment'] ?? null;
         $cookie = $_POST['cookie'] ?? null;
-        $emailHome ='';
         $emailUa = get_theme_mod('email_ua') ? get_theme_mod('email_ua') : '';
         $emailBlr = get_theme_mod('email_blr') ? get_theme_mod('email_blr') : '';
 
